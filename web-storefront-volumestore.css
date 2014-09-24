@@ -1,0 +1,559 @@
+/*
+** Copyright © 2014 Apple Inc.
+** All rights reserved.
+*/
+
+.itvs{position:relative;width:980px;margin:0 auto;padding:0;text-align:left;-webkit-box-shadow:rgba(0,0,0,.3) 0 1px 3px;-moz-box-shadow:rgba(0,0,0,.3) 0 1px 3px;background:#fff;border-radius:4px 4px 0 0;-webkit-border-radius:4px 4px 0 0;-moz-border-radius:4px 4px 0 0}
+.itvs.closed,.itvs_bottom{margin:0 auto}
+body.software .itvs,body.ebook .itvs{margin-bottom:20px}
+.itvs_bottom{width:980px;-webkit-box-shadow:rgba(0,0,0,.3) 0 1px 3px;-moz-box-shadow:rgba(0,0,0,.3) 0 1px 3px;background:#fff;border:1px solid\9;border-width:0 1px 1px\9;border-color:#e5e5e5 #dbdbdb #d2d2d2\9}
+#main .itvs{padding:0;margin-top:70px}
+#iTunesDetectorIE{display:block}
+.itvs{border:1px solid\9;border-color:#e5e5e5 #dbdbdb #d2d2d2\9}
+.itvs:nth-child(1n){-border:0}
+body.software .itvs,body.ebook .itvs,.itvs.closed,.itvs_bottom{border-bottom-right-radius:4px;border-bottom-left-radius:4px;-webkit-border-bottom-right-radius:4px;-webkit-border-bottom-left-radius:4px;-moz-border-radius-bottomright:4px;-moz-border-radius-bottomleft:4px}
+div.itvs_footer{width:984px;margin:60px auto 0;color:#777;font-size:11px;text-align:center}
+div.itvs_footer a{color:#08c;font-size:11px}
+.itvs #main{background:0}
+.itvs>div{padding:0 20px}
+.itvs>div.hero{padding:53px 45px 30px 305px;background:url(web-storefront/images/itvs/itvs_hero@2x.png) 50px 40px no-repeat,url(web-storefront/images/results_shadow.png) 0 0 repeat-x;background-size:175px 175px,auto auto;min-height:175px}
+.itvs>div.hero.b2b{background:url(web-storefront/images/itvs/epp_hero@2x.png) 50px 40px no-repeat,url(web-storefront/images/results_shadow.png) 0 0 repeat-x;background-size:175px 175px,auto auto;min-height:175px}
+.itvs div.hero h2,.itvs div.hero-b2b h2{margin-bottom:30px;font-size:26px;font-weight:normal;color:#4c4c4c;line-height:30px}
+.itvs div.hero,.itvs div.hero-b2b{font-size:16px;line-height:22px;color:#4c4c4c}
+.itvs>div.lmbar{zoom:1;height:0;position:absolute;top:-40px;width:920px}
+.itvs>div.lmbar:after{content:" ";display:block;clear:both;float:none}
+.itvs div.lmbar a.back-link:hover{text-decoration:none}
+.itvs div.lmbar h3{float:left;margin-top:2px;font-size:16px;font-weight:normal}
+.itvs>#search_form{padding:20px 0;background:#fcfcfc url(web-storefront/images/search_form_bg.png) 100% 100% repeat-x;border-radius:10px 10px 0 0}
+.itvs.closed>#search_form{-webkit-border-bottom-left-radius:4px;-webkit-border-bottom-right-radius:4px;-moz-border-radius-bottomleft:4px;-moz-border-radius-bottomright:4px}
+.itvs>#search_form form{height:41px;padding:0 20px;zoom:1}
+.itvs>#search_form form:after{content:" ";display:block;clear:both;float:none}
+.itvs #search_form label{display:inline-block;margin-right:15px;color:#4c4c4c;position:relative}
+.itvs #search_form label span{display:block;margin-bottom:3px;font-weight:bold;text-overflow:ellipsis;overflow:hidden;white-space:nowrap}
+.itvs #search_form label input{width:300px;padding:2px 18px 2px 25px;background:url(web-storefront/images/itvs/magnifying-glass.svg) no-repeat 5px 5px;-webkit-border-radius:12px;-moz-border-radius:12px;border-radius:12px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;-webkit-tap-highlight-color:rgba(0,0,0,0);line-height:normal;outline:0;border-style:none;border-bottom:1px solid #b3b3b3;border-right:1px solid #b3b3b3;-webkit-box-shadow:1px 1px 1px 1px #8f8f8f inset;-moz-box-shadow:1px 1px 1px 1px #8f8f8f inset;box-shadow:1px 1px 1px 1px #8f8f8f inset}
+.itvs #search_form label .reset{background:url(web-storefront/images/itvs/reset.svg);height:11px;width:11px;position:absolute;right:5px;text-align:left;top:25px;z-index:0;display:none}
+.itvs #search_form span.button{display:inline-block;height:20px;margin-top:20px;margin-left:0}
+.itvs #search_form span.button>button,div.vpp_admin span.button button,#learn-more-button button,.itvs_bottom.account_summary span.button button{display:inline-block;min-width:80px;height:20px;line-height:20px;padding:0;margin:0;text-align:center;border:0 none transparent;font-weight:bold;-webkit-appearance:none;outline:0}
+.itvs button:hover{cursor:pointer}
+.itvs div.hr{display:block;height:1px;background-color:#e2e2e2;border-bottom:1px solid #fff}
+.itvs>#search_form div.errorMsg{display:block;position:relative;top:-21px;margin:0 -1px;padding:6px 20px;color:#fff;border:1px solid #d4d5d6;border-width:0;background:#ff5f47 url(web-storefront/images/itvs/error_bg.png) 0 0 repeat-x}
+.itvs_bottom #search_results{position:relative;display:none;min-height:78px;padding:22px 20px;background:url(web-storefront/images/results_shadow.png) 0 0 repeat-x}
+.itvs_bottom #search_results.active{display:block}
+.itvs_bottom div.result{display:none;padding-bottom:50px;color:#4c4c4c;zoom:1}
+.itvs_bottom #search_results:after,.itvs_bottom div.result:after{content:" ";display:block;clear:both;float:none}
+.itvs_bottom div.result div.title{margin-bottom:16px;zoom:1}
+.itvs_bottom div.result div.title:after{content:" ";display:block;clear:both;float:none}
+.itvs_bottom div.result div.title h4{float:left;margin-right:15px;font-size:15px}
+.itvs_bottom div.result div.title span.num_results,.itvs_bottom div.result div.title a.see-all{display:inline-block;display:inline\9;margin-top:1px;margin-top:5px\9;margin-right:15px;color:#7c7c7c}
+.itvs_bottom div.result div.title a.see-all{display:none}
+.itvs_bottom div.result div.tracklist table{width:940px;background:url(web-storefront/images/table_headbg.png) 0 0 no-repeat}
+.itvs_bottom div.result div.tracklist table thead th,.itvs_bottom div.result div.tracklist table tbody td{padding-right:10px;padding-left:10px}
+.itvs_bottom div.result div.tracklist table thead th span,.itvs_bottom div.result div.tracklist table tbody td span{display:inline-block;margin:5px 0 4px;*display:block;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.itvs_bottom div.result div.tracklist table thead th.name{font-weight:bold}
+.itvs_bottom div.result div.tracklist table .artwork{width:34px;text-align:right;padding:0}
+.itvs_bottom div.result div.tracklist table .artwork>span{padding-right:10px}
+.itvs_bottom div.result div.tracklist table .artwork>a{width:34px}
+.itvs_bottom div.result div.tracklist table .name>span{max-width:250px;width:230px\9}
+.itvs_bottom div.result div.tracklist table tbody .name{zoom:1}
+.itvs_bottom div.result div.tracklist table tbody .name:after{content:" ";display:block;clear:both;float:none}
+.itvs_bottom div.result div.tracklist table tbody .name>span{color:#298CDA;font-weight:bold}
+.itvs_bottom div.result div.tracklist table tbody .name span span{display:inline-block;*display:none}
+.itvs_bottom div.result div.tracklist table tbody .name span.iosuniversal,.itvs_bottom div.result div.tracklist table tbody .custom-app-name span.iosuniversal span{width:10px;height:10px;vertical-align:middle;margin:0 0 0 8px;background:url(web-storefront/images/itvs/plus.png) 0 0 no-repeat;*display:none}
+.itvs_bottom div.result div.tracklist table tbody .name span.iosuniversal,.itvs_bottom div.result div.tracklist table tbody .custom-app-name span.iosuniversal{*background:url(web-storefront/images/itvs/plus.png) 100% 50% no-repeat}
+.itvs_bottom div.result div.tracklist table tbody .name>span.badges{display:inline-block;float:right;width:auto;margin:0;padding:0}
+.itvs_bottom div.result div.tracklist table tbody .name>span.badges span.editions{position:relative;display:inline-block;background:url(web-storefront/images/itvs/editions_popup.png) 50% 50% no-repeat;margin:4px 0 0 0;width:17px;height:17px;text-indent:-9999px;cursor:pointer;z-index:11;color:transparent}
+.itvs_bottom div.result div.tracklist table .album_artist span{width:214px;width:194px\9}
+.itvs_bottom div.result div.tracklist table .album_genre span{width:140px;width:120px\9}
+.itvs_bottom div.result div.tracklist table .release_date span{width:110px;width:90px\9}
+.itvs_bottom div.result div.tracklist table .custom-app-name span{width:200px;width:180px\9}
+.itvs_bottom div.result div.tracklist table .custom-app-device span{width:150px;width:130px\9}
+.itvs_bottom div.result div.tracklist table .custom-app-developer span{width:104px;width:84px\9}
+.itvs_bottom div.result div.tracklist table .custom-app-category span{width:100px;width:80px\9}
+.itvs_bottom div.result div.tracklist table tbody td:hover{cursor:pointer}
+.itvs_bottom div.result div.tracklist table tbody td{border-bottom:1px solid #e5e5e5}
+.itvs_bottom div.result div.tracklist table tbody td.name{width:308px}
+.itvs_bottom div.result div.tracklist table tbody td.album_link{font-size:10px;text-align:right}
+.itvs_bottom div.result div.tracklist table tbody td.album_link>a{width:100px\9}
+.itvs_bottom div.result div.tracklist table tbody td.artwork>a{display:block;position:relative;min-height:30px}
+.itvs_bottom div.result div.tracklist table tbody td.artwork>a img{max-width:30px;margin:2px 0 -2px 2px;border:1px solid #fff;-webkit-box-shadow:0 2px 2px rgba(0,0,0,.5);-moz-box-shadow:0 2px 2px rgba(0,0,0,.5)}
+.itvs_bottom div.result.album div.tracklist table tbody td.artwork>a img,.itvs_bottom div.result.song div.tracklist table tbody td.artwork>a img,.itvs_bottom div.result.software div.tracklist table tbody td.artwork>a img,.itvs_bottom div.result.tvSeason div.tracklist table tbody td.artwork>a img,.itvs_bottom div.result.tvEpisode div.tracklist table tbody td.artwork>a img,.itvs_bottom div.result.audiobook div.tracklist table tbody td.artwork>a img,.itvs_bottom div.result.podcast div.tracklist table tbody td.artwork>a img{min-height:30px}
+.itvs_bottom div.result.movie div.tracklist table tbody td.artwork>a img,.itvs_bottom div.result.shortFilm div.tracklist table tbody td.artwork>a img{min-height:45px}
+.itvs_bottom div.result div.tracklist table tbody td.artwork>a.app img{border:0;margin-bottom:0;-webkit-box-shadow:none;-moz-box-shadow:none}
+.itvs_bottom div.result div.tracklist table tbody td.artwork div.mask{position:absolute;top:2px;left:2px;width:34px;height:34px;background:url(web-storefront/images/app_mask.png) 0 0 no-repeat}
+.itvs .product_info span.mask{position:absolute;top:4px;left:0;width:32px;height:32px;background:url(web-storefront/images/app_mask.png) 0 0 no-repeat;background-size:32px 34px}
+.itvs .buy-complete .artwork{position:relative}
+.itvs .buy-complete div.artwork{width:75px;height:75px;float:left;margin-right:20px}
+.itvs .buy-complete div.artwork.ebook{width:57px}
+.itvs .buy-complete span.mask{position:absolute;top:0;left:0;width:85px;height:85px;background:url(web-storefront/images/itvs/icon_mask75@2x.png) -5px -5px no-repeat;background-size:85px 85px}
+.itvs_bottom div.result div.artists h5{display:block;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;font-weight:bold}
+.itvs_bottom div.result div.artists span.genre{display:block;color:#7c7c7c}
+.itvs_bottom div.result div.artists a.link{max-width:140px}
+.itvs_bottom div.result div.tracklist table tbody td a.link{max-width:100px}
+.itvs_bottom div.result div.artists a.link,.itvs_bottom div.result div.tracklist table tbody td a.link{display:block;text-overflow:ellipsis;overflow:hidden;white-space:nowrap}
+.itvs_bottom div.result div.tracklist table tfoot td{padding:5px 0 4px 18px;background:url(web-storefront/images/itvs/plus.png) 0 50% no-repeat;font-size:11px}
+.itvs_bottom div.no-results,.itvs_bottom div.invalid-url,.itvs_bottom div.not-available{display:none;margin:14px 0;text-align:center;font-size:16px;font-weight:bold;color:#4c4c4c}
+.itvs_bottom div.no-results h3,.itvs_bottom div.invalid-url h3,.itvs_bottom div.not-available h3{margin-bottom:8px;font-size:15px;color:#4c4c4c}
+.itvs_bottom div.no-results p,.itvs_bottom div.invalid-url p,.itvs_bottom div.not-available p{margin-bottom:8px;font-weight:normal;font-size:13px;color:#4c4c4c}
+.itvs_bottom div.active div.loading{display:none}
+.itvs_bottom div.loading div.loading_shadow{position:absolute;top:3px;left:0;width:980px;height:94%;background:rgba(255,255,255,.7);z-index:9999;background:url(web-storefront/images/linkmaker/ie_shadow.png)\9;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/linkmaker/ie_shadow.png', sizingMethod='scale')!important}
+.itvs_bottom div.loading div.loading_text{position:absolute;top:36px;left:50%;margin-left:-55px;padding-left:30px;font-size:16px;line-height:24px;font-weight:bold;color:#4c4c4c;background:url(web-storefront/images/linkmaker/loading.gif) 0 50% no-repeat;z-index:10000}
+.itvs_bottom a.top-page{display:none;float:right;margin-bottom:0}
+.itvs div.lmbar{zoom:1}
+.itvs div.lmbar h1,.appstore-header h1,.itvs_signin h1,.vpp-title h1,.itvs_form h1{display:inline-block;line-height:34px;text-shadow:none;font-size:28px;letter-spacing:-2px;font-weight:500;margin-top:0;text-indent:-9999px;min-width:460px;min-height:34px}
+.vpp-title h1{top:-40px;height:34px;left:20px}
+.itvs div.lmbar:after{content:" ";display:block;clear:both;float:none}
+.itvs div.lmbar a.signin{display:block;float:right;height:20px;margin-top:2px;padding-left:9px;min-width:100px;margin-right:-20px}
+.itvs div.lmbar a.signin:hover,.itvs div.lmbar a.signin:hover span{text-decoration:none;cursor:pointer}
+.itvs div.lmbar a.signin span{display:block;height:20px;max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding:0 20px 0 10px;color:#fff;text-align:center;text-shadow:0 -1px 1px rgba(0,0,0,.3);font-size:12px;font-weight:bold;line-height:20px}
+.itvs div.lmbar div.user-info{display:block;float:right;max-width:560px\9;zoom:1}
+.itvs div.lmbar div.user-info:after{content:" ";display:block;clear:both;float:none}
+.itvs div.lmbar div.user-info div.account,.itvs div.lmbar div.user-info div.credit,.itvs div.lmbar div.user-info div.info{margin-top:-12px}
+.itvs div.lmbar div.user-info div.account a{display:block;color:#4c4c4c;padding:1px 15px;text-decoration:none;line-height:16px}
+.itvs div.lmbar div.user-info div.account a:hover{background:linear-gradient(0deg, #2865F2, #6088F4);background:-webkit-linear-gradient(90deg, #2865F2, #6088F4);color:#fff}
+.itvs div.lmbar div.user-info div.account>a.name>span{min-width:196px;max-width:300px;text-align:left;padding:0;font-size:12px;line-height:inherit}
+.itvs div.lmbar div.user-info div.credit,.itvs div.lmbar div.user-info div.info{display:block;float:right;height:42px;padding-top:8px;padding-right:20px;text-align:right}
+.itvs div.lmbar div.user-info div.info span.name{display:inline-block;max-width:160px;line-height:16px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+.itvs div.lmbar div.user-info div.credit>span.amount,.itvs div.lmbar div.user-info div.credit span.name{display:inline-block;min-height:14px;margin:9px 20px 0 0;font-size:12px;color:#5e5e5e;line-height:12px}
+.amount a{color:#4c4c4c;text-decoration:none}
+.itvs div.lmbar div.user-info div.credit span.name{margin-top:2px}
+.itvs div.lmbar div.user-info span.duns-number{display:block;font-size:10px;line-height:12px;color:#6c6c6c}
+.itvs>#purchase_form,.itvs_bottom>#purchase_history{position:relative;padding:20px 20px 20px 20px;color:#4c4c4c;background:url(web-storefront/images/results_shadow.png) 0 0 repeat-x;zoom:1}
+.itvs_bottom>#purchase_history{background:0}
+.itvs>#purchase_form form:after{content:" ";display:block;clear:both;float:none}
+.itvs>#purchase_form div.quantity,.itvs>#purchase_form div.buy_action{zoom:1}
+.itvs>#purchase_form h3{margin-bottom:10px;font-size:20px;font-weight:normal;color:#4c4c4c}
+.itvs>#purchase_form div.product_info div.title{float:left;width:390px;line-height:18px}
+.itvs>#purchase_form div.product_info div.product_details{float:right;width:550px;line-height:22px;text-align:right}
+#price-quantity-total{display:none}
+.itvs>#purchase_form div.product_description{clear:both}
+.itvs>#purchase_form span.product_confirm{display:inline-block;max-width:330px;line-height:16px}
+.itvs>#purchase_form div.title span{font-weight:bold}
+.itvs>#purchase_form form div.total_text,.itvs>#purchase_form form div.app_total_text{display:inline-block;float:right;*display:inline;min-width:135px;text-align:right}
+.itvs>#purchase_form form #app_edition{font-weight:bold}
+.itvs>#purchase_form form div.details{display:inline-block;margin-right:25px}
+.itvs>#purchase_form form #edition{max-width:140px}
+.itvs>#purchase_form form input#quantity{width:50px}
+.itvs>#purchase_form form a:hover,.itvs>#purchase_form form a:focus{text-decoration:none;outline:0}
+.itvs>#purchase_form form a.button,#edit_billing form div.navigation>span,#edit_billing form div.navigation>a,#edit_account form div.navigation>span,#edit_account form div.navigation>a{position:relative;display:inline-block;*display:inline;float:right;height:20px;*margin:0 0 0 20px;padding:0 0 0 10px;border:0;zoom:1}
+.itvs>#purchase_form form a.button:hover{cursor:pointer}
+.itvs>#purchase_form form a.button span,#edit_billing form div.navigation input,#edit_billing form div.navigation button,#edit_account form div.navigation input,#edit_account form div.navigation button{display:inline-block;*display:block;max-width:170px;min-width:60px;height:20px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:center;padding:0 18px 0 9px;*padding-top:0;*padding-bottom:4px;color:#fff;text-shadow:none;font-size:12px;line-height:20px;vertical-align:center;zoom:1;border:0;background:0}
+#edit_billing form div.navigation input,#edit_billing form div.navigation button,#edit_account form div.navigation input,#edit_account form div.navigation button{width:100px}
+.itvs>#purchase_form form a.button.blue.buy,#edit_billing form div.navigation>.continue-wrapper,#edit_account form div.navigation>.continue-wrapper{background:url(web-storefront/images/itvs/buttons/btn_blue_l.png) 0 0 no-repeat;cursor:pointer}
+.itvs>#purchase_form form a.button.blue.buy span,#edit_billing form div.navigation>.continue-wrapper input,#edit_billing form div.navigation>.continue-wrapper button,#edit_account form div.navigation>.continue-wrapper input,#edit_account form div.navigation>.continue-wrapper button{background:url(web-storefront/images/itvs/buttons/btn_blue_r.png) 100% 0 no-repeat;cursor:pointer}
+#edit_billing form div.navigation>.continue-wrapper.disabled input,#edit_billing form div.navigation>.continue-wrapper input.disabled,#edit_billing form div.navigation>.continue-wrapper.disabled button,#edit_billing form div.navigation>.continue-wrapper button.disabled,#edit_account form div.navigation>.continue-wrapper.disabled input,#edit_account form div.navigation>.continue-wrapper input.disabled,#edit_account form div.navigation>.continue-wrapper.disabled button,#edit_account form div.navigation>.continue-wrapper button.disabled{color:#9cc4ec}
+.itvs>#purchase_form form a.button.blue.disabled:hover,.itvs>#purchase_form form a.button.blue.disabled:hover span,#edit_billing form div.navigation>.continue-wrapper.disabled:hover,#edit_billing form div.navigation>.continue-wrapper.disabled:hover input,#edit_billing form div.navigation>.continue-wrapper.disabled:hover button,#edit_account form div.navigation>.continue-wrapper.disabled:hover,#edit_account form div.navigation>.continue-wrapper.disabled:hover input,#edit_account form div.navigation>.continue-wrapper.disabled:hover button{cursor:default}
+.itvs>#purchase_form form a.button.blue.buy:not(.disabled):active,#edit_billing form div.navigation>.continue-wrapper:not(.disabled):active,#edit_account form div.navigation>.continue-wrapper:not(.disabled):active{background:url(web-storefront/images/itvs/buttons/btn_blue_l-pressed.png) 0 0 no-repeat;cursor:pointer}
+.itvs>#purchase_form form a.button.blue.buy:not(.disabled):active span,#edit_billing form div.navigation>.continue-wrapper:not(.disabled):active input,#edit_billing form div.navigation>.continue-wrapper:not(.disabled):active button,#edit_account form div.navigation>.continue-wrapper:not(.disabled):active input,#edit_account form div.navigation>.continue-wrapper:not(.disabled):active button{background:url(web-storefront/images/itvs/buttons/btn_blue_r-pressed.png) 100% 0 no-repeat;cursor:pointer}
+.itvs>#purchase_form form div.buy_action{display:none}
+.itvs>#purchase_form form div.buy_action,.itvs>#purchase_form form div.buy_line{clear:both;zoom:1}
+.itvs>#purchase_form form div.buy_action div.app_total_text{float:right;color:#777;font-size:10px}
+.itvs>#purchase_form form div.buy_action div.app_total_text>label{font-size:12px}
+.itvs>#purchase_form form div.buy_action div.app_total_text>span.app_total_text{font-size:12px;color:#000;font-weight:bold}
+.total_text label{padding-right:20px}
+.itvs>#purchase_form form div.buy_action div.app_total_text.hide_plus_tax_text{margin-top:0;line-height:22px}
+.itvs>#purchase_form form div.buy_action div.app_total_text.hide_plus_tax_text>.plus-tax{display:none}
+.itvs>#purchase_form form div.product_info{border-top:1px solid #E5E5E5;padding-top:10px;zoom:1}
+.itvs>#purchase_form form div.product_info:after,.itvs>#purchase_form div.product_description:after{content:"";clear:both;float:none;display:block}
+.itvs>#purchase_form form div.buy_line,.itvs>#purchase_form form div.product_description{margin-top:10px;padding:10px 0;border:1px solid #e5e5e5;border-width:1px 0 0;color:#777;font-size:11px}
+.itvs>#purchase_form form div.buy_action div.buy_line{margin-top:9px}
+.itvs>#purchase_form form div.buy_line p:last-child{float:left;width:100%;margin-bottom:14px;line-height:22px;border-bottom:1px solid #E5E5E5;padding-bottom:14px}
+.itvs>#purchase_form form div.buy_line p span{font-weight:bold;color:#4C4C4C}
+.itvs>#purchase_form form div.buy_action:after,.itvs>#purchase_form form div.buy_line:after{content:"";display:block;clear:both;float:none}
+.itvs>#purchase_form form a.button{margin-top:7px;float:right\9}
+/*.itvs>#purchase_form form div.buy_line a.button.grey,.itvs>#purchase_form form div.product_description a.button.grey,#edit_billing form div.navigation>span.cancel-wrapper,#edit_account form div.navigation>span.cancel-wrapper{float:right;margin:7px 20px 0 0;background:url(web-storefront/images/itvs/buttons/btn_silver_l.png) 0 0 no-repeat}*/
+#edit_billing form div.navigation>span.cancel-wrapper,#edit_account form div.navigation>span.cancel-wrapper{margin-top:0;cursor:pointer}
+.itvs>#purchase_form form div.buy_line a.button.grey span,.itvs>#purchase_form form div.product_description a.button.grey span,#edit_billing form div.navigation>span.cancel-wrapper input.cancel,#edit_account form div.navigation>span.cancel-wrapper input.cancel{color:#1b1b1b;font-weight:normal;background:url(web-storefront/images/itvs/buttons/btn_silver_r.png) 100% 0 no-repeat;text-shadow:none;padding:0 9px 0 0;min-width:100px;cursor:pointer;outline:0}
+.itvs>#purchase_form form div.buy_line a.button.grey:active,.itvs>#purchase_form form div.product_description a.button.grey:active,#edit_billing form div.navigation>span.cancel-wrapper:active,#edit_account form div.navigation>span.cancel-wrapper:active{background:url(web-storefront/images/itvs/buttons/btn_silver_l-pressed.png) 0 0 no-repeat}
+.itvs>#purchase_form form div.buy_line a.button.grey:active span,.itvs>#purchase_form form div.product_description a.button.grey:active span,#edit_billing form div.navigation>span.cancel-wrapper:active input.cancel,#edit_account form div.navigation>span.cancel-wrapper:active input.cancel{background:url(web-storefront/images/itvs/buttons/btn_silver_r-pressed.png) 100% 0 no-repeat}
+.itvs_bottom>#back_link{padding:6px 20px 4px;border-bottom:1px solid #e4e5e4}
+.itvs_bottom>#back_link a.back{padding-left:8px;background:url(web-storefront/images/back.gif) 0 50% no-repeat}
+.itvs_bottom>#account_info{padding:20px 20px;border-bottom:1px solid #e4e5e4}
+.itvs_bread_crumb{margin:10px 20px 20px;font-size:15px;color:#4c4c4c}
+.itvs_bottom.account_summary,.itvs_bottom.purchase_history,.itvs_bottom.redemption_history{padding:20px 20px 0;border-top-right-radius:4px;border-top-left-radius:4px;-webkit-border-top-right-radius:4px;-webkit-border-top-left-radius:4px;-moz-border-radius-topright:4px;-moz-border-radius-topleft:4px;font-family:Lucida Grande;color:#4c4c4c;font-size:12px;line-height:20px;width:942px}
+.itvs_bottom>.panel_label{padding:0 0 20px;border-bottom:1px solid #e4e5e4;font-size:20px}
+.itvs_bottom>#license_management,.itvs_bottom #account_information{padding:30px 0 0}
+.itvs_bottom>#recent_purchases,.itvs_bottom>#highlighted_purchase{padding:30px 0 0}
+.itvs_bottom #payments{display:inline-block;width:100%;margin-top:30px}
+.itvs_bottom #licmanagement_details{margin:0 0 0 40px;display:inline-block;width:706px;border-bottom:1px solid #e4e5e4;padding-bottom:30px;vertical-align:top}
+.itvs_bottom #rp_details{margin:0 0 0 40px;display:inline-block;width:706px;border-bottom:1px solid #e4e5e4;padding-bottom:30px;vertical-align:top;position:relative}
+.itvs_bottom #rp_details .detail_row{display:block;vertical-align:top}
+.itvs_bottom #accinfo_details{margin:0 0 0 40px;display:inline-block;width:706px;vertical-align:top;padding-bottom:30px}
+.itvs_bottom .segment{margin-left:20px}
+.itvs_bottom .bold{font-weight:bold}
+.itvs_bottom #org_info{padding:0 0 30px;border-bottom:1px solid #e4e5e4}
+.itvs_bottom .fullwidth{display:inline-block;width:100%}
+.itvs_bottom #mdm_text{display:inline-block;width:520px}
+.itvs_bottom .left_pane_title{width:190px;text-align:right;display:inline-block;vertical-align:top;font-weight:bold;font-size:15px}
+.itvs_bottom #fullname{font-weight:bold}
+.itvs_bottom .payment_label{text-align:right;width:130px;display:inline-block;margin-right:10px}
+.itvs_bottom #redeem_voucher{display:block;background:url(web-storefront/images/more.gif) 100% 50% no-repeat;padding-right:8px;font-weight:bold;float:right}
+.itvs_bottom #edit_payment{display:block;background:url(web-storefront/images/more.gif) 100% 50% no-repeat;padding-right:8px;font-weight:bold;right:0;top:0;position:absolute}
+.itvs_bottom .detail_rows{overflow:hidden}
+.itvs_bottom .detail_rows .detail_row span{display:inline-block;overflow:hidden}
+.itvs_bottom #download_token{display:block;padding-right:8px;font-weight:bold;float:right}
+.itvs_bottom #payment-details{zoom:1}
+.itvs_bottom #payment-details:after{content:" ";display:block;float:none;clear:both}
+.itvs_bottom>#account_info h3,.itvs_bottom div.vpp_admin h3{margin-bottom:20px;font-size:15px;font-weight:bold;color:#4c4c4c}
+.itvs_bottom #full_name{color:#6c6c6c;width:33%}
+.itvs_bottom #cc{color:#6c6c6c;margin:0 0 0 50px}
+.itvs_bottom #edit-payment{display:block;float:right}
+.itvs_bottom #edit-payment a{font-weight:bold}
+.itvs_bottom>#purchase_history div.purchase{margin-bottom:20px;color:#4c4c4c}
+.itvs_bottom>#purchase_history h3{margin-bottom:20px;font-size:15px;font-weight:bold;color:#4c4c4c}
+.itvs_bottom>#purchase_history p.order_info{margin-bottom:15px;font-size:11px;line-height:14px}
+.itvs_bottom>#purchase_history div.purchase table{width:960px;margin:5px 0 10px;table-layout:fixed\9}
+.itvs_bottom>#purchase_history div.purchase.new_layout table{width:925px!important;margin:5px 0 10px;table-layout:fixed\9}
+.itvs_bottom.redemption_history table#redemption_history{width:930px!important;margin:5px 6px 10px;table-layout:fixed\9}
+.itvs_bottom.redemption_history{padding-bottom:10px}
+.itvs_bottom>#purchase_history div.purchase table thead,.itvs_bottom.redemption_history div.purchase table thead{border-bottom:1px solid #e5e5e5}
+.itvs_bottom>#purchase_history div.purchase table thead th span,.itvs_bottom.redemption_history div.purchase table thead th span{padding-bottom:10px;font-weight:bold;white-space:nowrap}
+.itvs_bottom>#purchase_history div.purchase table tbody tr:first-child span,.itvs_bottom>#purchase_history div.purchase table tbody tr:first-child td>a{padding-top:13px}
+.itvs_bottom>#purchase_history div.purchase table th>span,.itvs_bottom>#purchase_history div.purchase table td>span,.itvs_bottom>#purchase_history div.purchase table td>a,.itvs_bottom.redemption_history div.purchase table thead th>span,.itvs_bottom.redemption_history div.purchase table tbody td>span{display:block;padding:2px 20px 2px 10px}
+.itvs_bottom>#purchase_history div.purchase.recent table tbody tr td,.itvs_bottom.redemption_history div.purchase table tbody tr.odd td{background-color:#f3f9fd}
+.itvs_bottom>#purchase_history div.purchase.recent table tbody tr.even td,.itvs_bottom.redemption_history div.purchase table tbody tr.even td{background-color:#fff}
+.itvs_bottom>#purchase_history div.purchase table .code span,.itvs_bottom>#purchase_history div.purchase table .code a,.itvs_bottom>#purchase_history div.purchase table .redeemed_total span{padding-right:10px}
+.itvs_bottom>#purchase_history div.purchase table tbody tr td a.more{max-width:450px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+.itvs_bottom>#purchase_history div.purchase table tbody tr td a.more span{display:inline-block;padding-right:8px;font-weight:bold;background:url(web-storefront/images/more.gif) 100% 50% no-repeat}
+.itvs_bottom>#purchase_history div.purchase table .desc{width:330px\9}
+.itvs_bottom>#purchase_history div.purchase table .desc a{display:inline-block;max-width:330px;padding-right:8px;font-weight:bold;background:url(web-storefront/images/more.gif) 100% 50% no-repeat}
+.itvs_bottom>#purchase_history div.purchase table.with-type .desc a{max-width:230px}
+.itvs_bottom>#purchase_history div.purchase table .date,.itvs_bottom>#purchase_history div.purchase table .redeemed_date{width:100px}
+.itvs_bottom>#purchase_history div.purchase table .redeemed_code{width:760px}
+.itvs_bottom>#purchase_history div.purchase table td span,.itvs_bottom>#purchase_history div.purchase table td a{white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+.itvs_bottom>#purchase_history div.purchase table .number{width:120px\9}
+.itvs_bottom>#purchase_history div.purchase table .unit{width:110px\9}
+.itvs_bottom>#purchase_history div.purchase table .total{width:140px\9}
+.itvs_bottom>#purchase_history div.purchase table .number span{padding-right:0}
+.itvs_bottom>#purchase_history div.purchase table .quantity span{max-width:50px}
+.itvs_bottom>#purchase_history div.purchase table .unit span,.itvs_bottom>#purchase_history div.purchase table .type span{max-width:80px}
+.itvs_bottom.purchase_history>#purchase_history div.purchase table .type span{max-width:90px!important}
+.itvs_bottom>#purchase_history div.purchase table .code a,.itvs_bottom>#purchase_history div.purchase table .code span{max-width:140px}
+.itvs_bottom>#purchase_history div.purchase table .redeemed_code span{max-width:450px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+.itvs_bottom.redemption_history div.purchase table .redeemed_date{width:260px;text-align:left}
+.itvs_bottom.redemption_history div.purchase table .redeemed_code{width:260px;text-align:left}
+.itvs_bottom.redemption_history div.purchase table .redeemed_total{width:260px;text-align:right}
+.itvs_bottom>#purchase_history div.purchase.recent{padding-bottom:3px;margin-top:10px;border-bottom:1px solid #e5e5e5;margin-bottom:30px;margin-right:-10px;margin-left:-10px}
+.itvs_bottom>#purchase_history div.purchase.redemptions{margin-top:20px;padding:10px 0;border:1px solid #e5e5e5;border-width:1px 0}
+.itvs_bottom>#purchase_history div.purchase table .total span,.itvs_bottom>#purchase_history div.purchase table .unit span,.itvs_bottom>#purchase_history div.purchase table .quantity span{text-align:right}
+.itvs_bottom>#purchase_history div.purchase table .code span.processing{padding-left:13px;margin-left:-9px;background:#f3f9fd url(web-storefront/images/itvs/itvs_processing.png) 0 50% no-repeat}
+.itvs_bottom>#purchase_history div.purchase a.show_more{font-weight:bold}
+.itvs_bottom>#purchase_history div.no_history,.itvs_bottom.redemption_history div.no_history{padding-top:18px;text-align:center}
+.itvs_bottom>#purchase_history div.no_history h3,.itvs_bottom.redemption_history div.no_history h3{margin-bottom:8px}
+#main #content.itvs div.itvs_form{min-height:247px}
+#main #content.itvs div.itvs_signin{min-height:297px}
+#main #content.itvs div.itvs_terms{padding-bottom:30px}
+.itvs_form div.form_container.centered{margin-left:345px;margin-top:86px;width:250px}
+.itvs_form.itvs_redeem_success div.form_container.centered{margin-top:114px}
+.itvs_form div.form_container div.form_header h3{font-size:12px;margin-bottom:2px}
+.itvs_form div.form_container div.form_header p{color:#585858;font-size:11px;margin-bottom:0;line-height:14px}
+.itvs_form div.form_container div.field_container,.itvs_form.itvs_redeem div.form_container.centered,.itvs_form.itvs_redeem_success div.form_container.centered{margin-top:23px}
+.itvs_form.itvs_redeem div.form_container.centered,.itvs_form.itvs_redeem_success div.form_container.centered{padding-bottom:43px}
+.itvs_form div.form_container div.field_container>table{margin-top:18px}
+.itvs_form div.form_container div.field_container>table input.text{margin-top:2px;line-height:16px;font-size:12px}
+.itvs_thank_you div.form_container.centered{margin-top:118px}
+.itvs_thank_you div.form_container div.field_container{margin-top:15px}
+#main #content.itvs div.itvs_form div.title h1,#main .itvs div.itvs_faq div.title h1{display:inline-block;margin:0;padding:0;position:relative;top:-40px;left:-21px;height:34px}
+#main .itvs div.itvs_faq div.title h1{top:-57px;left:0;text-indent:-9999px}
+#main #content.itvs div.itvs_form form span.field_label{font-size:12px}
+#main #content.itvs div.itvs_form form input.text,#main #content.itvs div.itvs_form form input[type="text"],#main #content.itvs div.itvs_form form input[type="password"],#main #content.itvs div.itvs_form form input[type="email"],#main #content.itvs div.itvs_form form input[type="number"],#main #content.itvs div.itvs_form form input[type="tel"],#main #content.itvs div.itvs_form form input[type="url"]{width:250px}
+#main #content.itvs div.itvs_form form input.button{overflow:visible;outline:0}
+#main #content.itvs div.itvs_form form table.button_container button{width:120px}
+#main #content.itvs form div.field_container div.error{margin-bottom:15px}
+#main #content.itvs .error,.authentication.error{color:#ed1c24;font-weight:bold}
+#main #content div.field_container tr.button_spacer{border:0;line-height:10px}
+#main #content div.field_container tr img{visibility:hidden}
+div.field_container input.hidden{width:0;height:0;visibility:hidden;line-height:0;padding:0;margin:0;border:0 none transparent}
+/*.itvs_form .button_container a.button,.itvs_form .button_container span.button,.itvs #search_form span.button,div.vpp_admin span.button,.itvs_bottom.account_summary span.button,a.button.history,a.button.gen_history,a.button.authenticate,a.button.cancel,#learn-more-button,.itvs>#purchase_form form a.button{background:url(web-storefront/images/itvs/buttons/btn_silver_l.png) 0 0 no-repeat;display:inline-block;padding:0 0 0 10px;text-decoration:none;zoom:1;cursor:pointer;vertical-align:top;min-height:20px;*display:inline}*/
+.itvs_form .button_container.timeout{margin-top:15px}
+.itvs_form .button_container a.button:hover{text-decoration:none}
+/*.itvs_form .button_container a.button>span,.itvs_form .button_container span.button>input.button,.itvs #search_form span.button>button,div.vpp_admin span.button button,.itvs_bottom.account_summary span.button button,a.button.history span,a.button.gen_history span,a.button.authenticate span,a.button.cancel span,#learn-more-button button{background:url(web-storefront/images/itvs/buttons/btn_silver_r.png) 100% 0 no-repeat;display:inline-block;max-width:370px;padding:0 18px 0 9px;zoom:1;color:#1b1b1b;font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-shadow:0 1px 0 rgba(255,255,255,.75);text-align:center;vertical-align:top;cursor:pointer;*overflow:visible}*/
+.itvs_form table.button_container tr{line-height:0}
+.itvs_form .button_container span.button>input.button{line-height:18px;height:20px;display:inline-block;border:0 none transparent}
+.itvs_form .button_container a.button>span{line-height:20px;height:20px}
+.itvs_form .button_container a.button.disabled,.itvs_form .button_container span.button.disabled{cursor:default}
+.itvs_form .button_container a.button.disabled>span,.itvs_form .button_container span.button.disabled>input.button{color:#919191;text-shadow:0 1px 0 rgba(255,255,255,.4);cursor:default}
+.itvs_form .button_container a.button.default.disabled>span,.itvs_form .button_container span.button.default.disabled>input.button,.itvs_form .button_container a.button.blue.disabled>span,.itvs_form .button_container span.button.blue.disabled>input.button{color:#cacaca;text-shadow:0 1px 0 rgba(255,255,255,.13)}
+.itvs_form .button_container a.button:active:not(.disabled),.itvs_form .button_container span.button:active:not(.disabled),.itvs #search_form span.button:active{background:url(web-storefront/images/itvs/buttons/btn_silver_l-pressed.png) 0 0 no-repeat}
+.itvs_form .button_container a.button:active:not(.disabled)>span,.itvs_form .button_container span.button:active:not(.disabled)>input.button,.itvs #search_form span.button:active>button{background:url(web-storefront/images/itvs/buttons/btn_silver_r-pressed.png) 100% 0 no-repeat}
+.itvs_form .button_container a.button.default,.itvs_form .button_container span.button.default{background:url(web-storefront/images/itvs/buttons/btn_dkgray_l.png) 0 0 no-repeat}
+.itvs_form .button_container a.button.default>span,.itvs_form .button_container span.button.default>input.button{color:#fff;text-shadow:0 -1px 0 rgba(0,0,0,.25);background:url(web-storefront/images/itvs/buttons/btn_dkgray_r.png) 100% 0 no-repeat}
+.itvs_form .button_container a.button.default:active:not(.disabled),.itvs_form .button_container span.button.default:active:not(.disabled){background:url(web-storefront/images/itvs/buttons/btn_dkgray_l-pressed.png) 0 0 no-repeat}
+.itvs_form .button_container a.button.default:active:not(.disabled)>span,.itvs_form .button_container span.button.default:active:not(.disabled)>input.button{background:url(web-storefront/images/itvs/buttons/btn_dkgray_r-pressed.png) 100% 0 no-repeat}
+.itvs_form .button_container a.button.blue,.itvs_form .button_container span.button.blue{background:url(web-storefront/images/itvs/buttons/btn_blue_l.png) 0 0 no-repeat}
+.itvs_form .button_container a.button.blue>span,.itvs_form .button_container span.button.blue>input.button{color:#fff;text-shadow:0 -1px 0 rgba(0,0,0,.25);background:url(web-storefront/images/itvs/buttons/btn_blue_r.png) 100% 0 no-repeat}
+.itvs_form .button_container a.button.blue:active:not(.disabled),.itvs_form .button_container span.button.blue:active:not(.disabled){background:url(web-storefront/images/itvs/buttons/btn_blue_l-pressed.png) 0 0 no-repeat}
+.itvs_form .button_container a.button.blue:active:not(.disabled)>span,.itvs_form .button_container span.button.blue:active:not(.disabled)>input.button{background:url(web-storefront/images/itvs/buttons/btn_blue_r-pressed.png) 100% 0 no-repeat}
+#main #content.itvs div.itvs_form.itvs_redeem table.button_container td.cancel{*width:115px}
+#main #content.itvs div.itvs_form.itvs_redeem .button_container span.button>input.button{min-width:110px}
+#main #content.itvs div.itvs_form.itvs_redeem table.button_container td.continue{*width:88px}
+#main #content.itvs div.itvs_form.itvs_redeem .button_container a.button>span{min-width:83px}
+#main #content.itvs div.itvs_form.itvs_redeem_success table.button_container td.redeem_another{*width:112px}
+#main #content.itvs div.itvs_form.itvs_redeem_success table.button_container td.done{*width:64px}
+#main #content.itvs div.itvs_form.itvs_redeem_success .button_container a.button#redeemAnother_button>span{min-width:107px}
+#main #content.itvs div.itvs_form.itvs_redeem_success .button_container a.button#done_button>span{min-width:59px}
+.itvs_form.itvs_signin div.form_container.centered,.itvs_form.itvs_dialog div.form_container.centered{margin-left:224px;width:498px;margin-top:30px;margin-bottom:20px}
+#main #content.itvs div.itvs_signin form input#accountname,#main #content.itvs div.itvs_signin form input#accountpassword{width:235px}
+.itvs_form div.field_container label.checkbox_label.dialog{color:#585858;font-size:11px}
+.itvs div.terms_container{border-bottom:1px solid #e5e5e5;padding-bottom:22px}
+.itvs div.terms_container.optional{margin-top:16px}
+.itvs div.terms_container label{font-weight:bold;font-size:13px;color:#000;margin-left:6px}
+.itvs div.terms_container h4{text-align:center;font-size:11px;line-height:14px;margin:2px 0 20px}
+.itvs div.scrollable_terms_container{margin:0 0 11px;height:238px;border:1px solid #c5c5c5;background-color:#f1f1f1;padding:5px;overflow:auto}
+.itvs .terms_header span.printable_link{float:right;display:inline-block;margin-top:0;vertical-align:top;color:#000;font-size:11px;font-weight:bold}
+.itvs .terms_header a.printable_link{color:#000}
+.itvs .terms_header .printable_link img{margin-top:3px;margin-left:4px;display:inline-block;float:right}
+.itvs .terms_footer .terms_buttons{display:inline-block;float:right;vertical-align:top;padding:0;margin:0;margin:15px 0 25px}
+.itvs .terms_footer .terms_buttons span.button{margin-left:7px}
+.itvs .terms_footer .terms_buttons span.button>input.button{line-height:20px}
+.itvs .terms_header h3{color:#4c4c4c;font-size:15px;font-weight:bold;line-height:16px;margin-bottom:10px}
+.itvs .terms_header p{color:#7c7c7c;font-size:12px;font-weight:normal;line-height:14px;margin-bottom:13px}
+div.scrollable_terms_container{font-size:11px}
+div.scrollable_terms_container p.centered,div.scrollable_terms_container p:first-child{text-align:center}
+#main .itvs div.itvs_faq{padding:17px 20px 80px}
+#main .itvs div.itvs_faq div.faq_header{margin:0 80px;padding:44px 150px 90px 0;background:url(web-storefront/images/itvs/b2b_hero-faq.jpg) 100% 0 no-repeat}
+#main .itvs div.itvs_faq div.faq_header h2{margin-bottom:10px;font-size:20px;line-height:24px;color:#6d6f72}
+#main .itvs div.itvs_faq div.faq_header h3{margin:0;font-size:16px;color:#6d6f72}
+#main .itvs div.itvs_faq>h2{margin:40px 80px;font-size:16px;font-weight:bold;color:#1b1b1b}
+#main .itvs div.itvs_faq h4{margin:0 80px;font-size:13px;font-weight:bold;color:#1b1b1b}
+#main .itvs div.itvs_faq p{margin:0 80px 18px;line-height:16px;font-size:12px;font-weight:normal;color:#5e5e5e}
+@-moz-document url-prefix(){.itvs_form .button_container span.button>input.button{ padding-bottom:3px}
+.itvs .terms_footer .terms_buttons span.button>input.button{padding-bottom:2px}
+}
+div.appstore-header,.itvs_signin,.itvs_form{padding:17px 0 0;margin:70px 20px 0}
+div.appstore-header h1,.itvs_signin h1{display:inline-block;position:relative;top:-57px;left:-1px}
+div.volume-landing{padding-bottom:74px;zoom:1}
+div.volume-landing:after{content:" ";display:block;float:none;clear:both}
+div.volume-landing h2{margin-bottom:36px;font-size:16px;line-height:22px;font-weight:normal;color:#5e5e5e}
+div.program{float:right;width:460px;background:url(web-storefront/images/itvs/landing/programbg_bottom.png) 0 100% no-repeat}
+div.program.education{float:left}
+div.program-content{position:relative;padding:26px 33px 30px 33px;background:url(web-storefront/images/itvs/landing/programbg_top.png) 0 0 no-repeat}
+div.program-content p{margin:0;font-size:14px;line-height:21px;color:#333}
+div.program-content h4{height:42px;margin-bottom:4px;text-indent:-9999px}
+.volume-landing div.program-content h4{background-size:auto 42px!important}
+div.program-content hr{height:1px;margin:0 0 12px;border:0;background-color:#e6e6e6;border-bottom:1px solid #fff;text-decoration:none}
+div.volume-landing div.program a:hover{text-decoration:none}
+div.program-content h3{width:300px;height:17px;margin-bottom:29px;color:#5a5a5a;font-size:17px;font-weight:normal;text-decoration:none}
+div.program-content .more{padding-right:8px;font-size:14px;background:url(web-storefront/images/more.gif) 100% 50% no-repeat;color:#298CDA}
+a:hover div.program-content .more{text-decoration:underline}
+div.program-content span.edu-logo,div.program-content span.ent-logo{position:absolute;top:18px;right:32px}
+div.program-content span.edu-logo{width:80px;height:80px;background:url(web-storefront/images/itvs/landing/education_logo@2x.png) 0 0 no-repeat;background-size:80px 80px}
+div.program-content span.ent-logo{width:80px;height:80px;background:url(web-storefront/images/itvs/landing/enterprise_logo@2x.png) 0 0 no-repeat;background-size:80px 80px}
+#edit_billing div.title,#edit_billing div.page-error-text,#edit_account div.title,#edit_account div.page-error-text{padding:25px 20px 15px}
+#edit_billing div.title h4,#edit_account div.title h4{font-size:20px;font-weight:normal;color:#4c4c4c;padding-bottom:20px;border-bottom:1px solid #e4e5e4}
+div.billing-information,div.account-information{padding:0 20px;color:#4c4c4c;zoom:1}
+div.billing-information:after,div.account-information:after{content:' ';display:block;float:none;clear:both}
+div.navigation{zoom:1;padding:0 25px 25px}
+div.navigation:after{content:" ";clear:both;float:none;display:block}
+div.account-block hr,div.billing-information hr,div.navigation hr{clear:both;height:1px;margin:30px 0 20px;border:0;background-color:rgba(0,0,0,.1);*background:0;*border:1px solid #E4E5E4;-webkit-box-shadow:0 1px 0 rgba(255,255,255,.5)}
+div.account-errors,div.address-verification-errors,div.county-verification-errors{width:250px;margin:22px 3px 17px 17px}
+div.formset{position:relative;display:inline-block;*display:inline;margin:0 30px 0 0}
+div.account-block div.select{margin-bottom:0;vertical-align:top}
+div.formset label{display:block;margin-bottom:6px;font-size:14px}
+div.payment-info div.formset.credit-card label{margin-bottom:8px}
+div.formset label>span{font-weight:bold;margin-right:10px}
+div.formset input+label{display:inline-block;font-size:12px}
+div.formset.stacked{display:block;margin:0 10px 13px 0;max-width:inherit}
+div.formset.stacked label{margin-bottom:8px}
+div.formset input:disabled+span{margin-left:10px;width:350px;display:inline-block;vertical-align:middle}
+div.formset span.hint{visibility:hidden;position:absolute;top:56px;left:!px;min-height:30px;width:255px;padding:3px 16px 10px;font-size:11px;color:#999;background:-webkit-gradient(linear,0 0,0 100%,from( #fff),color-stop(0.8, #ededed),to( #f8f8f8));border:1px solid rgba(111,111,111,.4);-webkit-border-radius:1px;-webkit-box-shadow:0 5px 8px rgba(0,0,0,.4);-webkit-transition:opacity 300ms ease-in;opacity:0;z-index:2}
+p.instruction,p.description{clear:both;margin:0 0 10px;font-size:14px;line-height:14px}
+div.section-fields{display:-webkit-box}
+div.address-block{width:593px}
+div.account-fields{float:left;max-width:670px;*width:600px}
+div.account-errors{float:right;width:250px;margin:22px 3px 17px 17px}
+div.inline-page-errors{width:250px;margin:0}
+ul.page-error{padding:10px 10px 10px 25px;background:#f1f1f1;background:rgba(255,255,255,.5);border:1px solid #EE2E24;border:1px solid rgba(255,0,0,.35);list-style-position:outside;opacity:0;-webkit-transition:height 300ms ease-in,opacity 300ms ease-in}
+ul.page-error li{color:#ee2e24;font-size:9px;list-style-type:disc;opacity:0;-webkit-transition:opacity 300ms ease-in}
+ul.page-error li span{display:block;font-size:12px}
+ul.page-error li.hide{display:none}
+div.formset.select,div.formset.inline{display:inline-block;*display:inline}
+input[type="text"],input[type="password"],input[type="email"],input[type="tel"],input[type="number"]{width:175px;line-height:21px;min-height:18px;font-size:12px;padding-left:4px}
+div.payment-info input[type="text"]{width:160px}
+div.formset input.birth-year{width:100px}
+div.formset input.creditCardNumber{width:150px}
+div.formset input.creditVerificationNumber{width:65px}
+div.formset input.code-redeem{width:310px}
+div.code-redemption p.error{color:#f00;margin-bottom:6px}
+div.billing-information div.paypal-info{display:none;margin-top:17px;font-size:14px;line-height:20px;width:472px}
+div.address-block div.formset.select{vertical-align:baseline}
+div.billing-information.paypal div.code-redemption,div.billing-information.paypal div.address-block,div.billing-information.paypal div.payment-info div.formset:not(.credit-card),div.billing-information.paypal hr{display:none}
+div.billing-information.paypal div.paypal-info{display:inline-block;*display:inline;margin-bottom:30px}
+div.billing-information.none div.payment-info div.formset:not(.credit-card){display:none}
+div.payment-info span.divider{display:inline-block;*display:block;*float:left;margin-top:4px;font-size:14px}
+#edit_billing p.error{color:#ee2e24}
+div.payment-info.pay-service p.instruction{margin-bottom:5px;line-height:16px}
+div.payment-info a.pay-service{font-size:14px;margin-bottom:5px;display:inline-block;*display:inline}
+div.payment-info div.formset{display:inline-block;*display:block;*float:left;vertical-align:top;margin-right:6px}
+div.payment-info div.formset.select{margin-right:0}
+div.payment-info div.formset.credit-card{display:block;*float:none;max-width:inherit;margin-right:20px;margin-bottom:18px;zoom:1}
+div.payment-info div.formset.credit-card ul li{position:relative;display:inline-block;*display:block;*float:left;*width:40px;margin-right:12px;vertical-align:top}
+div.payment-info div.formset.credit-card ul li input{*display:block;width:40px;height:24px;-webkit-appearance:none;-webkit-box-shadow:0 3px 3px rgba(0,0,0,.15);box-shadow:0 3px 3px rgba(0,0,0,.15);cursor:pointer;background-repeat:no-repeat;background-position:0 0;text-indent:-9999px;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;min-width:0;border:0;*color:transparent;-webkit-background-size:40px 24px;-moz-background-size:40px 24px;-o-background-size:40px 24px;background-size:40px 24px}
+div.payment-info div.formset.credit-card ul li label{display:none;text-indent:-9999px;visibility:hidden}
+div.payment-info div.formset.credit-card ul li input.bank{width:37px;-webkit-background-size:37px 24px;-moz-background-size:37px 24px;-o-background-size:37px 24px;background-size:37px 24px}
+div.payment-info div.formset.credit-card ul li input.fgat{width:82px;-webkit-background-size:82px 24px;-moz-background-size:82px 24px;-o-background-size:82px 24px;background-size:82px 24px}
+div.payment-info div.formset.credit-card ul li input.lase{width:25px;-webkit-background-size:25px 24px;-moz-background-size:25px 24px;-o-background-size:25px 24px;background-size:25px 24px}
+div.payment-info div.formset.credit-card ul li input.maes{width:38px;-webkit-background-size:38px 24px;-moz-background-size:38px 24px;-o-background-size:38px 24px;background-size:38px 24px}
+div.payment-info div.formset.credit-card ul li input.pclk{width:50px;-webkit-background-size:50px 24px;-moz-background-size:50px 24px;-o-background-size:50px 24px;background-size:50px 24px}
+div.payment-info div.formset.credit-card ul li input.solo{width:19px;-webkit-background-size:19px 24px;-moz-background-size:19px 24px;-o-background-size:19px 24px;background-size:19px 24px}
+div.payment-info div.formset.credit-card ul li input.swit{width:19px;-webkit-background-size:19px 24px;-moz-background-size:19px 24px;-o-background-size:19px 24px;background-size:19px 24px}
+div.payment-info div.formset.credit-card ul li input.clickbuy{width:82px;-webkit-background-size:82px 24px;-moz-background-size:82px 24px;-o-background-size:82px 24px;background-size:82px 24px}
+div.payment-info div.formset.credit-card ul li input.none{background:#fff;color:#000}
+div.payment-info div.formset.credit-card ul li input.none{display:inline-block;vertical-align:middle;width:auto;*width:40px;line-height:11px;padding:6px;font-weight:normal;-webkit-box-shadow:0 3px 3px rgba(0,0,0,.15);box-shadow:0 3px 3px rgba(0,0,0,.15);-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;background:#e3e4e3;background:-webkit-gradient(linear,0 0,0 100%,from(transparent),to(rgba(0,0,0,.1)));background:-moz-linear-gradient(top,transparent,rgba(0,0,0,.1));border:1px solid rgba(145,145,145,.5);text-indent:0}
+div.payment-info div.formset.credit-card ul li.selected{border:3px solid #227adb;margin:-3px 9px -3px -3px;*margin:0 12px 0 0;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px}
+div.payment-info div.formset.credit-card ul li.selected input.none{border-radius:0;-webkit-border-radius:0;-moz-border-radius:0}
+div.payment-info input[name="ccv"]{display:block;width:60px}
+div.payment-info a.toggle-hint{position:absolute;top:28px;left:75px;width:14px;height:14px;display:block;text-indent:-9999px;background:url(web-storefront/images/itvs/cards/ccv_bg.png) 0 0 no-repeat;z-index:3}
+div.payment-info a.toggle-hint.close{top:26px;left:73px;width:19px;height:19px;background:url(web-storefront/images/itvs/cards/ccv_bg_close.png) 0 0 no-repeat}
+div.payment-info div.hint{position:absolute;display:none;top:22px;left:70px;width:160px;height:260px;padding:8px 10px 8px 24px;font-size:11px;background:#ccc;color:#777;border:1px solid #e2e2e2;-webkit-border-radius:8px;background:#fff;overflow:hidden;opacity:0;-webkit-box-shadow:0 3px 8px rgba(0,0,0,.3);-webkit-transition:opacity .3s linear;z-index:2}
+div.payment-info div.hint div.card-back{padding-bottom:102px;text-align:center;margin-bottom:8px;background:url(web-storefront/images/itvs/cards/visa_ccv.jpg) 0 100% no-repeat}
+div.payment-info div.hint div.card-front{padding-bottom:97px;text-align:center;background:url(web-storefront/images/itvs/cards/amex_ccv.jpg) 0 100% no-repeat}
+div.payment-info div.formset div.select{display:inline-block;*display:block;*float:left}
+div.payment-info div.message p{margin:0}
+div.payment-info div.message p span{font-weight:bold}
+div.code-redemption input[type="text"]{width:310px}
+div.address-block{position:relative;margin-bottom:17px}
+div.address-group div.formset{margin-right:10px}
+div.address-block div.select{display:inline-block;margin-bottom:10px;margin-right:6px}
+div.address-block div.formset{margin-right:6px;margin-bottom:10px}
+div.address-block div.name-block input,div.address-block div.phonetic-name-block input{width:141px}
+div.address-block div.street-block input{width:302px}
+div.address-block input#city{width:112px}
+div.address-block input#state{width:51px}
+div.address-block div.postalCode input{width:100px}
+div.address-block div.county+div.postalCode input{width:127px}
+div.address-block input#phone1AreaCode{width:75px;margin-right:0}
+div.address-block input#phone1Number{width:125px}
+div.address-block div.area-code+div.phone input#phone1Number{margin-left:-4px}
+div.address-block .country-name{font-size:13px;white-space:nowrap;padding-bottom:10px}
+div.address-group div.select{*display:inline;*vertical-align:top}
+div.address-group div.select #state{*margin:3px 0 -10px}
+form div.formset.error,form div.payment-info div.formset.error input,form div.payment-info div.formset input.error,form div.account-information div.formset.error input,form div.account-information div.formset input.error{border:2px solid #ee2e24}
+form div.payment-info div.formset.error,form div.account-information div.formset.error{border:0}
+@media screen and (-webkit-min-device-pixel-ratio:0){div.address-block div.name-block input,div.address-block div.phonetic-name-block input{ width:142px}
+form div.formset.error,form div.payment-info div.formset.error input,form div.payment-info div.formset input.error,form div.account-information div.formset.error input,form div.account-information div.formset input.error{border:0;outline:3px auto #ee2e24;outline-offset:-2px}
+form div.payment-info div.formset.error,form div.account-information div.formset.error,div.vpp_admin form div.formset.error{border:0;outline:0}
+}
+form input.error,form .error input[type="text"]{background:url(web-storefront/images/itvs/error_o.png) 99% 50% no-repeat}
+#main .vpp-duplicate-cookie{color:#d00;font-weight:bold}
+#main .vpp-cookie-name{font-weight:bold}
+#close-editions{position:absolute;top:0;left:0;display:none;width:100%;height:100%;z-index:9}
+#editions{position:absolute;top:0;left:-9999px;width:409px;min-height:100px;padding-bottom:20px;background:url(web-storefront/images/itvs/bubble_bottom.png) 0 100% no-repeat;opacity:0;z-index:10;-webkit-transition:opacity .5s ease-in-out}
+#editions div.editions-content{padding:20px 20px 0 40px;text-align:left;background:url(web-storefront/images/itvs/bubble_top.png) 0 0 no-repeat}
+#editions div.editions-content a.selected-book{display:inline-block;max-width:100%;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;font-weight:bold}
+#editions div.editions-content h3,#country-picker div.content h3,#authentication-dialog div.content h3{font-size:12px;color:#4c4c4c;margin-bottom:4px;font-weight:bold}
+#editions div.editions-content hr,#country-picker div.content hr,#authentication-dialog div.content hr{border:0;height:1px;margin:6px 0 12px;background-color:#e2e2e2;border-bottom:1px solid #fff}
+#editions div.editions-content ul{padding-bottom:8px;zoom:1}
+#editions div.editions-content ul:after,#country-picker div.content ul:after{content:" ";display:block;float:none;clear:both}
+#editions div.editions-content ul li{float:left;width:100px;padding-right:8px}
+#country-picker{position:absolute;top:0;left:-9999px;width:388px;padding-bottom:33px;background:url(web-storefront/images/itvs/bubble_bottom_beak_bottom.png) 0 100% no-repeat;opacity:0;z-index:10;-webkit-transition:opacity .5s ease-in-out}
+#country-picker div.content{padding:20px 30px 5px;text-align:left;background:url(web-storefront/images/itvs/bubble_top_beak_none.png) 0 0 no-repeat}
+#country-picker div.content ul li{float:left;width:100px;padding-right:8px}
+#country-picker div.content ul li a{font-size:12px;display:inline-block;max-width:100%;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+#country-picker div.content hr,#authentication-dialog div.content hr{margin-bottom:6px}
+div.purchaseHistorySpinner span.spinner{display:block;text-indent:-9999px;width:32px;height:32px;margin:8px auto 32px;background:url(web-storefront/images/spinner32.gif) 50% 100% no-repeat}
+div.purchaseHistorySpinner span.no-spinner{background:0}
+a.button.history{text-align:right;float:right}
+a.button.gen_history{text-align:right}
+div#gen_history{text-align:right;width:100%;margin:20px 0}
+a.button.history span,a.button.gen_history span,a.button.authenticate span,a.button.cancel span{text-align:right;line-height:20px}
+p.order_info{vertical-align:middle;display:inline-block;max-width:650px}
+#authentication-dialog{position:fixed;top:0;left:-9999px;width:500px;padding-bottom:23px;background-color:#F2F2F2;opacity:0;z-index:100000;-webkit-transition:opacity .5s ease-in-out;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px}
+#authentication-dialog div.content{padding:20px 30px 5px;text-align:left}
+#mask{display:none;background:#000;position:fixed;left:0;top:0;width:100%;height:100%;opacity:.8;z-index:99999}
+div#authentication-dialog input[type="text"],div#authentication-dialog input[type="password"]{width:200px}
+div.vpp_admin div.errorMsg{color:#ed1c24}
+form div.vpp_admin div.formset.error{border:0}
+div.vpp_admin form div.formset.error input,div.vpp_adminform div.formset input.error{border:2px solid #ee2e24}
+div.vpp_admin #create_admin_user{vertical-align:bottom;margin-bottom:3px}
+div#admin_users table{margin-top:20px;width:100%}
+div#admin_users table th{font-weight:bold}
+#main div.vpp_admin{padding:20px 20px;border-top:1px solid #e4e5e4}
+input#accountNameField{width:300px}
+div.vpp_admin div.errorMsg{margin-bottom:10px}
+.itvs>div.hero{display:none}
+.vpp-title{text-indent:-9999px}
+#get_started{height:231px}
+#get_started h2{text-align:center;line-height:231px;margin-bottom:0;font-size:20px;color:#4c4c4c}
+#get_started{display:none}
+#promo-boxes{display:none}
+#promo-boxes:after{display:block;content:" ";clear:both;float:none}
+.promo-box{width:268px;min-height:165px;float:left;margin:20px 20px 0 0;-webkit-box-shadow:rgba(0,0,0,.3) 0 1px 3px;box-shadow:0 1px 3px rgba(0,0,0,.3);border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;background-color:#F8F8F8;border:3px solid white;padding:20px}
+#promo-box3{margin-right:0}
+.promo-header{color:#5E5E5E;margin-bottom:10px}
+.promo-box-text{color:#797676;font-size:13px;margin-bottom:10px}
+.promo-link{font-weight:bold;font-size:13px}
+#content a.more,#content a.see-all,#content a.view-in-itunes,#content a.view-in-appstore,.promo-box a,.see-more,#codes-or-licenses a,.delivery-method a{display:inline-block;padding-right:8px;background:url(web-storefront/images/more.gif) 100% 50% no-repeat}
+#learn-more-footer{width:794px;min-height:110px;padding-left:160px;background-repeat:no-repeat;background-position:top left;display:none;background:url(web-storefront/images/itvs/intro_licenses@2x.png) no-repeat;background-size:100px 100px;background-position:30px 20px;float:none}
+#learn-more-button{float:right;margin-top:15px}
+#learn-more-button button{color:#464646;font-weight:normal;min-width:100px}
+#learn-more-div{font-weight:normal;font-size:24px;line-height:24px;margin-bottom:20px}
+#learn-more-div{padding:30px 40px 40px 40px}
+#learn-more-div p,#learn-more-div li{color:#474747;line-height:20px;font-size:14px}
+#learn-more-div .divider{clear:both;border-top:1px solid #e4e5e4;height:20px;margin-left:-20px;width:940px}
+#learn-more-div .heading{font-weight:normal;font-size:24px;line-height:28px}
+.subsection{width:430px;display:inline-block;float:left;margin-bottom:20px;padding-right:20px}
+#learn-more-div .subsection .col2{padding-left:20px}
+.subsection .col2 li{list-style-image:url(web-storefront/images/itvs/progresscheckmark.png)}
+.divider-bar{clear:both;margin-left:-40px;height:37px;width:980px;background:url(web-storefront/images/itvs/divider_bar@2x.png) no-repeat;background-size:980px 57px}
+.subsection h4{font-size:16px;margin-bottom:10px}
+.product_details>div{float:left}
+.details.price span{display:block}
+#purchaseForm label{margin-top:-20px;display:block;line-height:20px}
+.total_text{float:left}
+.total_text{float:left}
+.itvs>#purchase_form form div.total_text,.itvs>#purchase_form form div.app_total_text{display:inline-block;float:right;min-width:50px;text-align:left}
+.itvs>#purchase_form div.product_info div.product_details{float:right;min-width:280px;line-height:18px;text-align:left;width:auto}
+.itvs>#purchase_form form input#quantity{width:60px}
+.itvs>#purchase_form div.title span{font-weight:bold;display:block}
+.itvs>#purchase_form form div.product_info{border-top:0}
+.purchase-details-headings{margin-top:-20px;display:block;text-align:left}
+.bold{font-weight:bold}
+#order-complete{display:none}
+#codes-or-licenses,#licenses-only-free{float:none;clear:both;margin-top:20px;border-top:1px solid #e5e5e5}
+#licenses-only-free{padding:20px 0}
+#codes-or-licenses h4,.buy_action .buy_line h4{font-size:12px;line-height:12px;margin:20px 0}
+#codes-or-licenses label{margin-bottom:20px;line-height:20px;display:table-row}
+#codes-or-licenses input{display:table-cell;margin-right:15px}
+.label-wrap{display:table-cell;padding-bottom:5px}
+.title-artwork{float:left;margin-right:10px}
+.itvs>#purchase_form .product_description a.button.grey.continue{margin-right:0}
+.itvs>#purchase_form form div.product_description a.button.grey.disabled span{color:#CECECE}
+div.details.price{min-width:150px}
+#purchase_form .plus-tax{margin-top:-5px}
+#app_total{line-height:12px}
+.buy_line{font-size:12px!important}
+.buy_line p{line-height:22px}
+.buy_line>span{font-weight:bold;display:block;margin-bottom:10px}
+.itvs_bottom #search_results{display:block}
+.loading{display:none}
+#order_processed{padding:30px 30px 30px 155px;line-height:20px}
+#order_processed h4{font-size:15px;margin-bottom:5px}
+#purchaseForm div.artwork{float:left;margin-right:10px;padding-top:4px;position:relative}
+#purchaseForm div.artwork img{width:30px;height:auto}
+.delivery-method{display:none}
+.quantity span.no-revoke,.buy_line>span.no-revoke{float:right;margin-right:20px;padding-top:10px;color:#535353;font-weight:bold;display:none;font-size:12px}
+.complete{padding:20px 150px;min-height:90px}
+#footer-disclaimer{text-align:left;margin-left:20px;display:none}
+.title h1,.itvs_form h1,.appstore-header h1{line-height:28px;position:absolute;width:100%}
+.account{margin-left:20px;display:none;z-index:100;background:#FFF;position:absolute;top:33px;border-radius:5px;box-shadow:0 0 3px;right:-20px;padding:3px 0}
+.user-info{position:relative}
+#user-info-button{border:1px solid #767676;border-radius:10px;box-shadow:0 1px 2px rgba(0,0,0,.25),inset 0 0 3px rgba(0,0,0,.25);background:#6a6a6a;background:linear-gradient(0deg, #6a6a6a, #ababab);background:-webkit-linear-gradient(90deg, #6a6a6a, #ababab);float:right;margin-right:-20px}
+#user-info-button:active{background:linear-gradient(0deg, #ababab, #6a6a6a);background:-webkit-linear-gradient(90deg, #ababab, #6a6a6a)}
+#user-info-button:hover{cursor:pointer}
+#user-info-button span{background:url(web-storefront/images/itvs/dropdown_arrow.png) center right no-repeat;color:#FFF;padding:0 10px 0 10px;margin-right:8px;display:inline-block;max-width:190px;overflow:hidden;text-overflow:ellipsis}
+.itvs div.buy-complete{padding:30px 30px 30px 135px;display:none;background:url(web-storefront/images/results_shadow.png) 0 0 repeat-x}
+.buy-complete:after{content:" ";display:block;clear:both;float:none}
+.buy-complete img.artwork{float:left}
+.buy-complete .title{float:left}
+.buy-complete .header-title{font-size:15px;font-weight:bold;margin:0 0 5px 0;max-width:700px}
+.buy-complete p{margin-bottom:0;line-height:20px}
+.signin,#signin_button{border:1px solid #2f6ba4;border-radius:10px;box-shadow:0 1px 2px rgba(0,0,0,.3);background:-moz-linear-gradient(top, #71b9eb 0, #47a1e1 10%, #2d75cf 87%, #1e5799 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%, #71b9eb),color-stop(10%, #47a1e1),color-stop(87%, #2d75cf),color-stop(100%, #1e5799));background:-webkit-linear-gradient(top, #71b9eb 0, #47a1e1 10%, #2d75cf 87%, #1e5799 100%);background:-ms-linear-gradient(top, #71b9eb 0, #47a1e1 10%, #2d75cf 87%, #1e5799 100%);background:linear-gradient(to bottom, #71b9eb 0, #47a1e1 10%, #2d75cf 87%, #1e5799 100%);filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#71b9eb', endColorstr='#1e5799', GradientType=0 )}
+.signin:active,#signin_button:active{background:#1e5799;background:-moz-linear-gradient(top, #1e5799 0, #2d75cf 13%, #47a1e1 90%, #71b9eb 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%, #1e5799),color-stop(13%, #2d75cf),color-stop(90%, #47a1e1),color-stop(100%, #71b9eb));background:-webkit-linear-gradient(top, #1e5799 0, #2d75cf 13%, #47a1e1 90%, #71b9eb 100%);background:-ms-linear-gradient(top, #1e5799 0, #2d75cf 13%, #47a1e1 90%, #71b9eb 100%);background:linear-gradient(to bottom, #1e5799 0, #2d75cf 13%, #47a1e1 90%, #71b9eb 100%);filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#71b9eb', GradientType=0 )}
+.signin span,#signin_button .button,#signin_button span{background:none!important}
+.itvs_signin h1,.itvs_form h1{left:-21px}
+.itvs div.lmbar a.signin+a.redeem{display:none}
+.itvs_bottom.purchase_history{min-height:150px}
+.buy-complete img.artwork{height:75px;width:auto}
+.no_history h3{margin-bottom:20px}
+#rp_details .segment{overflow:hidden;max-width:340px;display:inline-block;text-overflow:ellipsis;white-space:nowrap}
+input,button{font-family:inherit}

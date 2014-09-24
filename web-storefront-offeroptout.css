@@ -1,0 +1,38 @@
+/*
+** Copyright © 2014 Apple Inc.
+** All rights reserved.
+*/
+
+html,body{height:100%;background:#fff}
+body{color:#000;text-align:center;display:-webkit-box;-webkit-box-align:center;display:-moz-box;-moz-box-align:center;display:-o-box;-o-box-align:center;display:-ms-box;-ms-box-align:center;display:box;box-align:center;font-family:"Helvetica Neue","Helvetica",Arial,sans-serif;background-color:#fff;width:100%}
+body.ios{font:-apple-system-body;background-color:#f7f7f7}
+a{color:#298cda;outline:0}
+a:link,a:visited,a:active{text-decoration:none}
+a:hover{text-decoration:none}
+h1,h2,h3,h4,h5,h6{font-size:13px;font-weight:bold}
+.content.offer-opt-out{display:-webkit-box;-webkit-box-flex:1;-webkit-box-orient:vertical;display:-moz-box;-moz-box-flex:1;-moz-box-orient:vertical;display:-o-box;-o-box-flex:1;-o-box-orient:vertical;display:-ms-box;-ms-box-flex:1;-ms-box-orient:vertical;display:box;box-flex:1;box-orient:vertical;padding:50px 50px 70px;margin:0}
+.ios .content.offer-opt-out{padding:30px 20px 40px}
+.offer-opt-out div#authentication-dialog{margin-left:-261px;width:522px}
+.ios .offer-opt-out div#authentication-dialog{margin-left:-303px;width:438px}
+/*.offer-opt-out div#authentication-dialog .content{padding-left:100px;background:url(./itunes_large_2x.png) 17px 20px no-repeat;-webkit-background-size:63px 63px;-moz-background-size:63px 63px;-o-background-size:63px 63px;-ms-background-size:63px 63px;background-size:63px 63px}*/
+.ios .offer-opt-out div#authentication-dialog .content{padding:20px 20px 0;background:0}
+.offer-opt-out .dialog-message{font-weight:bold;color:#000;font-size:13px}
+.offer-opt-out div#authentication-dialog input[type="text"],.offer-opt-out div#authentication-dialog input[type="password"]{width:180px}
+.offer-opt-out #authentication-dialog label{font-size:13px;font-weight:bold}
+.offer-opt-out #authentication-dialog .button{font-weight:bold}
+.offer-opt-out #authentication-dialog .button:active span{opacity:.6}
+.offer-opt-out .dialog-error-container{min-height:10px}
+.offer-opt-out .authentication-error{margin-bottom:5px}
+.content-state-container{position:relative}
+.content-state-container .hidden{display:none}
+.album-cover-logo{width:170px;height:170px;background:url(./u2-album-cover-2x.jpeg) no-repeat;-webkit-background-size:170px 170px;-moz-background-size:170px 170px;-o-background-size:170px 170px;-ms-background-size:170px 170px;background-size:170px 170px;display:block;margin:0 auto 0;box-shadow:0 2px 4px rgba(0,0,0,.8),inset 0 1px 0 rgba(255,255,255,.19),inset 0 0 0 1px rgba(255,255,255,.1)}
+.ios .album-cover-logo{width:125px;height:125px;-webkit-background-size:125px 125px;-moz-background-size:125px 125px;-o-background-size:125px 125px;-ms-background-size:125px 125px;background-size:125px 125px}
+p.album-cover-title{margin:18px 0 0;font-weight:bold;font-size:16px}
+p.album-cover-artist{margin:7px 0 0;font-size:15px}
+.confirmation-title{font-size:22px;font-weight:bole;margin:15px auto 11px;max-width:430px;text-align:center}
+.explanation{font-size:14px;color:#626262;margin:35px auto 4px;max-width:650px;text-align:center}
+.ios .explanation{margin-top:25px}
+.button-header{font-size:14px;padding:20px 0 25px 0;margin:0}
+.opt-out-button{font-family:"Helvetica Neue",Helvetica,sans-serif;width:auto;height:30px;font-size:16px;font-weight:bold;color:#545454;background-color:#eaeaea;border:1px solid rgba(0,0,0,.2);border-radius:10px;padding:0 20px;min-height:36px;margin:0 auto;text-align:center}
+opt-out-button.disabled{pointer-events:none;opacity:.5}
+.opt-out-button:active{color:#fff;border:0;background-color:#0e7afb}
